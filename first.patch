@@ -1,0 +1,21 @@
+diff --git a/v4l/compat.h b/v4l/compat.h
+index 782fae7..a5eb57c 100644
+--- a/v4l/compat.h
++++ b/v4l/compat.h
+@@ -9,6 +9,7 @@
+ #include <linux/compiler.h>
+ #include <linux/input.h>
+ #include <linux/init.h>
++#include <linux/vmalloc.h>
+ #include "config-compat.h"
+ #include "../linux/kernel_version.h"
+ 
+@@ -1565,7 +1566,7 @@ static inline __s32 sign_extend32(__u32 value, int index)
+ #endif
+ 
+ #ifdef NEED_WRITEL_RELAXED
+-#define writel_relaxed writel
++//#define writel_relaxed writel
+ #endif
+ 
+ #ifdef NEED_GET_USER_PAGES_UNLOCKED
